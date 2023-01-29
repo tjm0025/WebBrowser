@@ -238,6 +238,8 @@
             // 
             // addressTextBox
             // 
+            this.addressTextBox.Items.AddRange(new object[] {
+            "www.google.com"});
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(121, 42);
             this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
