@@ -17,17 +17,20 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        //Exits the browser based on user prompt
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Displays about information from Help button
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This browser was developed by Tyanna Malone for CPSC 2710." +
                 "\n Student ID: 903204366");
         }
 
+        //Address Box that navigates to specified page in Collection 
         private void addressBox_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate(addressBox.SelectedItem.ToString());
