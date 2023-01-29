@@ -27,5 +27,10 @@ namespace WebBrowser.UI
             MessageBox.Show("This browser was developed by Tyanna Malone for CPSC 2710." +
                 "\n Student ID: 903204366");
         }
+
+        private void addressBox_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(addressBox.SelectedItem.ToString());
+        }
     }
 }
