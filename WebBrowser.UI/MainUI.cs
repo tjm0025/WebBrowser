@@ -58,6 +58,8 @@ namespace WebBrowser.UI
             Navigate(addressTextBox.Text);
         }
 
+        //Allows webbrowser 1 to navigate to a given URL if valid.
+        //Referenced https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.webbrowser.url?view=windowsdesktop-7.0
         private void Navigate(String address)
         {
             if (String.IsNullOrEmpty(address)) return;
