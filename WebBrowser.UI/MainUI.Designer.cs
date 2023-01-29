@@ -251,6 +251,7 @@
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(46, 36);
             this.goButton.Text = "Go";
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // MainUI
             // 

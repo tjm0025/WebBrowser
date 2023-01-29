@@ -51,5 +51,30 @@ namespace WebBrowser.UI
                 Navigate(addressTextBox.Text);
             }
         }
+
+        //Navigates to URL in address text box when Go is clicked by User
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            Navigate(addressTextBox.Text);
+        }
+
+        private void Navigate(String address)
+        {
+            if (String.IsNullOrEmpty(address)) return;
+            if (address.Equals("about:blank")) return;
+            if (!address.StartsWith("http://") &&
+                !address.StartsWith("https://"))
+            {
+                address = "http://" + address;
+            }
+            try
+            {
+                webBrowser1.Navigate(new Uri(address));
+            }
+            catch (System.UriFormatException)
+            {
+                return;
+            }
+        }
     }
 }
