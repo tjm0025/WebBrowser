@@ -25,7 +25,7 @@ namespace WebBrowser.UI
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This browser was developed by Tyanna Malone for CPSC 2710." +
-                "\n Student ID: 903204366")
+                "\n Student ID: 903204366");
         }
     }
 }
