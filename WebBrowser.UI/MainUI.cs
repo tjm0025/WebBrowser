@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WebBrowser.UI
 {
-    public partial class Form1 : Form
+    public partial class MainUI : Form
     {
-        public Form1()
+        public MainUI()
         {
             InitializeComponent();
         }
@@ -30,10 +30,26 @@ namespace WebBrowser.UI
                 "\n Student ID: 903204366");
         }
 
-        //Address Box that navigates to specified page in Collection 
-        private void addressBox_Click(object sender, EventArgs e)
+       
+       
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            webBrowser1.Navigate(addressBox.SelectedItem.ToString());
+
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Navigates to URL in address text box when Enter is clicked
+        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            { 
+                Navigate(addressTextBox.Text);
+            }
         }
     }
 }
