@@ -24,6 +24,7 @@ namespace WebBrowser.UI
         }
 
         //Stops the back button at beginning of nav history.
+        //This is just a test place holder until I can set up a better method
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             backButton.Enabled = webBrowser1.CanGoBack;
@@ -36,10 +37,14 @@ namespace WebBrowser.UI
         }
 
 
-
+        //Reloads the current page in browser
         private void refreshButton_Click(object sender, EventArgs e)
         {
-
+            //Skip the refresh if about:blank is loaded
+            if (!webBrowser1.Url.Equals("about:blank"))
+            {
+                webBrowser1.Refresh();
+            }
         }
 
         private void homeButton_Click(object sender, EventArgs e)
