@@ -80,10 +80,16 @@ namespace WebBrowser.UI
             }
         
         }
-
+        //Uses TabPages Collection to allow user to create new tab
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TabPage myTabPage= new TabPage("New Tab"); //creates the new tab
+            tabControl1.TabPages.Add(myTabPage); //adds the tab to tabcontrol
 
+            UserTabControl myUserTabControl = new UserTabControl();
+            myUserTabControl.Dock= DockStyle.Fill;
+            myTabPage.Controls.Add(myUserTabControl);
         }
+
     }
 }
