@@ -46,11 +46,12 @@
             this.fowardButton = new System.Windows.Forms.ToolStripButton();
             this.refreshButton = new System.Windows.Forms.ToolStripButton();
             this.homeButton = new System.Windows.Forms.ToolStripButton();
+            this.addressTextBox = new System.Windows.Forms.ToolStripComboBox();
+            this.goButton = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.addressTextBox = new System.Windows.Forms.ToolStripComboBox();
-            this.goButton = new System.Windows.Forms.ToolStripButton();
+            this.userTabControl1 = new WebBrowser.UI.UserTabControl();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -203,6 +204,25 @@
             this.homeButton.Size = new System.Drawing.Size(46, 36);
             this.homeButton.Text = "Home";
             // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Items.AddRange(new object[] {
+            "www.google.com"});
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(121, 42);
+            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
+            this.addressTextBox.Click += new System.EventHandler(this.toolStripComboBox1_Click);
+            // 
+            // goButton
+            // 
+            this.goButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
+            this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.goButton.Name = "goButton";
+            this.goButton.Size = new System.Drawing.Size(46, 36);
+            this.goButton.Text = "Go";
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
@@ -215,6 +235,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.userTabControl1);
             this.tabPage2.Controls.Add(this.webBrowser1);
             this.tabPage2.Location = new System.Drawing.Point(8, 39);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
@@ -236,24 +257,12 @@
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
-            // addressTextBox
+            // userTabControl1
             // 
-            this.addressTextBox.Items.AddRange(new object[] {
-            "www.google.com"});
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(121, 42);
-            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
-            this.addressTextBox.Click += new System.EventHandler(this.toolStripComboBox1_Click);
-            // 
-            // goButton
-            // 
-            this.goButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
-            this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(46, 36);
-            this.goButton.Text = "Go";
-            this.goButton.Click += new System.EventHandler(this.goButton_Click);
+            this.userTabControl1.Location = new System.Drawing.Point(4, 0);
+            this.userTabControl1.Name = "userTabControl1";
+            this.userTabControl1.Size = new System.Drawing.Size(1640, 773);
+            this.userTabControl1.TabIndex = 1;
             // 
             // MainUI
             // 
@@ -302,6 +311,7 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolStripComboBox addressTextBox;
         private System.Windows.Forms.ToolStripButton goButton;
+        private UserTabControl userTabControl1;
     }
 }
 
