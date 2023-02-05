@@ -47,9 +47,10 @@ namespace WebBrowser.UI
             }
         }
 
+        //Navigates webBrowser1 to home page.
         private void homeButton_Click(object sender, EventArgs e)
         {
-
+            webBrowser1.GoHome();
         }
 
         private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
