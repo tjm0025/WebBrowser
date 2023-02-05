@@ -80,5 +80,10 @@ namespace WebBrowser.UI
             }
         
         }
+
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
