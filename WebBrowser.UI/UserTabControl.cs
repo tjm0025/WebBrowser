@@ -17,18 +17,17 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        //Navigates webBrowser1 to previous page
+        //Navigates webBrowser1 to previous page.
         private void backButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoBack();
         }
 
-        //Stops the back button at beginning of nav history
-        private void webBrowser1_CanGoBack(object sender, WebBrowserDocumentCompletedEventArgs e)
+        //Stops the back button at beginning of nav history.
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             backButton.Enabled = webBrowser1.CanGoBack;
         }
-
 
 
         private void fowardButton_Click(object sender, EventArgs e)
