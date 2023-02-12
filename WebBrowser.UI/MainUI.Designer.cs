@@ -42,9 +42,9 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.userTabControl1 = new WebBrowser.UI.UserTabControl();
             this.userTabControl2 = new WebBrowser.UI.UserTabControl();
+            this.userTabControl1 = new WebBrowser.UI.UserTabControl();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -79,33 +79,33 @@
             // newTabToolStripMenuItem
             // 
             this.newTabToolStripMenuItem.Name = "newTabToolStripMenuItem";
-            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newTabToolStripMenuItem.Text = "New Tab";
             this.newTabToolStripMenuItem.Click += new System.EventHandler(this.newTabToolStripMenuItem_Click);
             // 
             // closeTabToolStripMenuItem
             // 
             this.closeTabToolStripMenuItem.Name = "closeTabToolStripMenuItem";
-            this.closeTabToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.closeTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeTabToolStripMenuItem.Text = "Close Tab";
             this.closeTabToolStripMenuItem.Click += new System.EventHandler(this.closeTabToolStripMenuItem_Click);
             // 
             // savePageAsToolStripMenuItem
             // 
             this.savePageAsToolStripMenuItem.Name = "savePageAsToolStripMenuItem";
-            this.savePageAsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.savePageAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.savePageAsToolStripMenuItem.Text = "Save page as...";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printToolStripMenuItem.Text = "Print...";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -121,13 +121,14 @@
             // manageHistoryToolStripMenuItem
             // 
             this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
-            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageHistoryToolStripMenuItem.Text = "Manage History";
+            this.manageHistoryToolStripMenuItem.Click += new System.EventHandler(this.manageHistoryToolStripMenuItem_Click);
             // 
             // manageBookmarksToolStripMenuItem
             // 
             this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
-            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
             // 
             // helpToolStripMenuItem
@@ -149,7 +150,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(0, 26);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1079, 690);
@@ -161,24 +162,21 @@
             this.tabPage2.Controls.Add(this.userTabControl1);
             this.tabPage2.Controls.Add(this.webBrowser1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(1071, 664);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // webBrowser1
+            // userTabControl2
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(2, 2);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(10, 10);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1067, 660);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.userTabControl2.Location = new System.Drawing.Point(0, 0);
+            this.userTabControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.userTabControl2.Name = "userTabControl2";
+            this.userTabControl2.Size = new System.Drawing.Size(1071, 660);
+            this.userTabControl2.TabIndex = 2;
             // 
             // userTabControl1
             // 
@@ -188,13 +186,16 @@
             this.userTabControl1.Size = new System.Drawing.Size(800, 432);
             this.userTabControl1.TabIndex = 1;
             // 
-            // userTabControl2
+            // webBrowser1
             // 
-            this.userTabControl2.Location = new System.Drawing.Point(0, 0);
-            this.userTabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userTabControl2.Name = "userTabControl2";
-            this.userTabControl2.Size = new System.Drawing.Size(1071, 660);
-            this.userTabControl2.TabIndex = 2;
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(2, 2);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(10, 10);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1067, 660);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // MainUI
             // 
@@ -204,7 +205,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainUI";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);

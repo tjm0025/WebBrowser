@@ -97,5 +97,11 @@ namespace WebBrowser.UI
         {
             tabControl1.TabPages.Remove(tabControl1.SelectedTab); //Removes selected tab
         }
+
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var itemsForm = new HistoryManagerForm();
+            itemsForm.ShowDialog();
+        }
     }
 }
