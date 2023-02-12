@@ -111,6 +111,10 @@
       <Project>{25f30535-76a9-455b-9c61-3996f96e81b0}</Project>
       <Name>WebBroswer.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebBrowser.Data\WebBrowser.Data.csproj">
+      <Project>{8fcaa091-2fb4-4cbb-9b9b-4bef32928608}</Project>
+      <Name>WebBrowser.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

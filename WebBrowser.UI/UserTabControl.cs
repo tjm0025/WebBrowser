@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WebBrowser.UI
 {
     public partial class UserTabControl : UserControl
@@ -92,6 +93,15 @@ namespace WebBrowser.UI
             }
         }
 
-       
+        private void bookmarkButton_Click(object sender, EventArgs e)
+        {
+            var item = new BookmarkItem();
+            item.URL = addressTextBox.Text;
+            item.Title = webBrowser1.Document.Title;
+
+            BookmarkManager.AddItem(item);
+
+
+        }
     }
 }
