@@ -11,6 +11,6 @@ namespace WebBroswer.Logic
         //gets and sets the URL, title, and date for history
         public String URL { get; set; }
         public String Title { get; set; }
-        public DateTime Date { get; set; }
+        public String Date { get; set; }
     }
 }

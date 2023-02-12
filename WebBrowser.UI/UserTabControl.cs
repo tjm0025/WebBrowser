@@ -29,7 +29,13 @@ namespace WebBrowser.UI
         {
             if (webBrowser1.Url.AbsoluteUri == e.Url.AbsoluteUri)
             {
-                var item = new HistoryItem
+                var item = new HistoryItem();
+                item.URL = addressTextBox.Text;
+                item.Title = webBrowser1.DocumentTitle;
+                item.Date = DateTime.Now.ToString("mm/dd/yyyy HH:mm:ss");
+
+                HistoryManager.AddItem(item);
+
             }
         }
 
