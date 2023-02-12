@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HistoryManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryManagerForm.Designer.cs">
+      <DependentUpon>HistoryManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     <Compile Include="UserTabControl.Designer.cs">
       <DependentUpon>UserTabControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HistoryManagerForm.resx">
+      <DependentUpon>HistoryManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainUI.resx">
       <DependentUpon>MainUI.cs</DependentUpon>
     </EmbeddedResource>
