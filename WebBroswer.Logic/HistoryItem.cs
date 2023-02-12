@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WebBroswer.Logic
+{
+    public class HistoryItem
+    {
+        //gets and sets the URL, title, and date for history
+        public String URL { get; set; }
+        public String Title { get; set; }
+        public DateTime Date { get; set; }
+    }
+}

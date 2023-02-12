@@ -43,7 +43,7 @@ namespace WebBrowser.UI
 
         }
 
-        //Navigates to URL in address text box when Enter is clicked
+        /**Navigates to URL in address text box when Enter is clicked
         private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -51,12 +51,14 @@ namespace WebBrowser.UI
                 Navigate(addressTextBox.Text);
             }
         }
+        **/
 
-       // Navigates to URL in address text box when Go is clicked by User
+       /**Navigates to URL in address text box when Go is clicked by User
         private void goButton_Click(object sender, EventArgs e)
         {
             Navigate(addressTextBox.Text);
         }
+       **/
         
 
         //Allows webbrowser 1 to navigate to a given URL if valid.
@@ -91,5 +93,9 @@ namespace WebBrowser.UI
             myTabPage.Controls.Add(myUserTabControl);
         }
 
+        private void closeTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabControl1.SelectedTab); //Removes selected tab
+        }
     }
 }
