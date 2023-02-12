@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebBroswer.Logic
 {
-    internal class BookmarkItem
+    public class BookmarkItem
     {
         //Gets and sets items for bookmarks
         public String URL { get; set; }

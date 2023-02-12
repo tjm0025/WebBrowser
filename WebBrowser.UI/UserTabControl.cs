@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WebBroswer.Logic;
 
 namespace WebBrowser.UI
 {
@@ -24,11 +24,13 @@ namespace WebBrowser.UI
             webBrowser1.GoBack();
         }
 
-        //Stops the back button at beginning of nav history.
-        //This is just a test place holder until I can set up a better method
+        //Adds Url to the history table in the database
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            backButton.Enabled = webBrowser1.CanGoBack;
+            if (webBrowser1.Url.AbsoluteUri == e.Url.AbsoluteUri)
+            {
+                var item = new HistoryItem
+            }
         }
 
 
