@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WebBrowser.UI
 {
-    public partial class HistoryManager : Form
+    public partial class BookmarkManage : Form
     {
-        public HistoryManager()
+        public BookmarkManage()
         {
             InitializeComponent();
-        }
-
-        private void HistoryManagerForm_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
