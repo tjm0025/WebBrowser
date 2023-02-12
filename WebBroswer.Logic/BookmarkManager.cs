@@ -8,5 +8,9 @@ namespace WebBroswer.Logic
 {
     internal class BookmarkManager
     {
+        public static void AddItem(BookmarkItem item)
+        {
+            var
+        }
     }
 }
