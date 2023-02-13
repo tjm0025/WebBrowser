@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WebBroswer.Logic;
 
 namespace WebBrowser.UI
 {
@@ -30,7 +30,7 @@ namespace WebBrowser.UI
 
             foreach (var item in items)
             {
-                listBox1 = listBox1.Items.Add(string.Format("[{0} {1} {2}", item.Date, item.Title, item.URL));
+                listBox1 = listBox1.Items.Add(string.Format("[{0}] {1} {2}", item.Date, item.Title, item.URL));
             }
         }
     }
