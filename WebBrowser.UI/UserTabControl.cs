@@ -103,11 +103,25 @@ namespace WebBrowser.UI
 
         private void bookmarkButton_Click(object sender, EventArgs e)
         {
-            var item = new BookmarkItem();
-            item.URL = addressTextBox.Text;
-            item.Title = webBrowser1.Document.Title;
-
-            BookmarkManager.AddItem(item);
+            var bookmarks = BookmarkManager.GetItems();
+            var bookmarkExists = false;
+            //Check and see if the bookmark already exists for that page
+            foreach ( var bookmark in bookmarks )
+            {
+                if (bookmark.URL == webBrowser1.Url.ToString())
+                {
+                    bookmarkExists = true;
+                }
+            }
+            //Add the bookmark if it doesn't already exist
+            if (!bookmarkExists)
+            {
+                var bookmark = new BookmarkItem();
+                bookmark.Title = webBrowser1.DocumentTitle;
+                bookmark.URL = webBrowser1.Url.ToString();
+                BookmarkManager.AddItem(bookmark);
+            }
+           
 
 
         }
