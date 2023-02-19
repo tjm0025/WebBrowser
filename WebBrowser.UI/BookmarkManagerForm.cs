@@ -47,5 +47,14 @@ namespace WebBrowser.UI
 
             }
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            //load bookmark manager items from dtatabase, then use Remove method from Bookmark manager to remove items from listbox.
+            var deletehistory = BookmarkManager.GetItems();
+            BookmarkManager.RemoveBookmark(deletehistory[bookmarkListBox.SelectedIndex]);
+            BookmarkManagerForm_Load(sender, e);
+            deleteButton.Enabled = false;
+        }
     }
 }
