@@ -54,10 +54,17 @@ namespace WebBrowser.UI
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            var history = HistoryManager.GetItems();
-            HistoryManager.RemoveItem(history[historyItemBox.SelectedIndex]);
+            //load history manager items from dtatabase, then use Remove method from History manager to remove items from listbox.
+            var deletehistory = HistoryManager.GetItems();
+            HistoryManager.RemoveItem(deletehistory[historyItemBox.SelectedIndex]);
             HistoryManagerForm_Load(sender, e);
             deleteButton.Enabled = false;
+        }
+
+        private void clearHisButton_Click(object sender, EventArgs e)
+        {
+            var clearhistory = HistoryManager.GetItems();
+
         }
     }
 }

@@ -25,6 +25,7 @@ namespace WebBroswer.Logic
             adapter.Delete(deleteItem.Id, deleteItem.URL, deleteItem.Title, deleteItem.Date);
         }
 
+      
         public static List<HistoryItem> GetItems()
         {
             var adapter = new HistoryTableAdapter();
@@ -42,6 +43,16 @@ namespace WebBroswer.Logic
                 results.Add(item);
             }
             return results;
+        }
+
+        public static void ClearHistory(HistoryItem clearItem)
+        {
+            var clearhistory = HistoryManager.GetItems();
+            foreach ( var item in clearhistory )
+            {
+                RemoveItem(item);
+            }
+
         }
     }
 }

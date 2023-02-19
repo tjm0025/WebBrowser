@@ -40,7 +40,7 @@
             this.historyItemBox.FormattingEnabled = true;
             this.historyItemBox.ItemHeight = 25;
             this.historyItemBox.Location = new System.Drawing.Point(28, 27);
-            this.historyItemBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.historyItemBox.Margin = new System.Windows.Forms.Padding(6);
             this.historyItemBox.Name = "historyItemBox";
             this.historyItemBox.Size = new System.Drawing.Size(1114, 629);
             this.historyItemBox.TabIndex = 0;
@@ -80,6 +80,7 @@
             this.clearHisButton.TabIndex = 4;
             this.clearHisButton.Text = "Clear History";
             this.clearHisButton.UseVisualStyleBackColor = true;
+            this.clearHisButton.Click += new System.EventHandler(this.clearHisButton_Click);
             // 
             // HistoryManagerForm
             // 
@@ -91,7 +92,7 @@
             this.Controls.Add(this.searchTermBox);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.historyItemBox);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "HistoryManagerForm";
             this.Text = "HistoryManagerForm";
             this.Load += new System.EventHandler(this.HistoryManagerForm_Load);
