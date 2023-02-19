@@ -33,5 +33,28 @@ namespace WebBrowser.UI
                 listBox1.Items.Add(string.Format("[{0}] {1} {2}", item.Date, item.Title, item.URL));
             }
         }
+
+        //User enters a pharse and searchs history items for keyword.
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            //if user has no input, load history items
+            if (searchTermBox.Text.Equals(""))
+            {
+                HistoryManagerForm_Load(sender, e);
+            }
+
+            else
+            {
+                listBox1.Items.Clear();
+                var history = HistoryManager.GetItems();
+                foreach (var item in history)
+                {
+                    if (item.ToString().ToUpper().Contains(searchTermBox.Text.ToUpper()))
+                    {
+                        listBox1.Items.Add(item);
+                    }
+                }
+            }
+        }
     }
 }
