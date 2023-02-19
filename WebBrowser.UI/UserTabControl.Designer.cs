@@ -55,7 +55,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(620, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(1240, 42);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -65,7 +65,7 @@
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(36, 36);
+            this.backButton.Size = new System.Drawing.Size(46, 36);
             this.backButton.Text = "Back";
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -75,7 +75,7 @@
             this.fowardButton.Image = ((System.Drawing.Image)(resources.GetObject("fowardButton.Image")));
             this.fowardButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fowardButton.Name = "fowardButton";
-            this.fowardButton.Size = new System.Drawing.Size(36, 36);
+            this.fowardButton.Size = new System.Drawing.Size(46, 36);
             this.fowardButton.Text = "Forward";
             this.fowardButton.Click += new System.EventHandler(this.fowardButton_Click);
             // 
@@ -85,7 +85,7 @@
             this.refreshButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshButton.Image")));
             this.refreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(36, 36);
+            this.refreshButton.Size = new System.Drawing.Size(46, 36);
             this.refreshButton.Text = "Refresh";
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
@@ -95,7 +95,7 @@
             this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
             this.homeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(36, 36);
+            this.homeButton.Size = new System.Drawing.Size(46, 36);
             this.homeButton.Text = "Home";
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
@@ -104,7 +104,7 @@
             this.addressTextBox.Items.AddRange(new object[] {
             "www.google.com"});
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(75, 39);
+            this.addressTextBox.Size = new System.Drawing.Size(146, 42);
             this.addressTextBox.Click += new System.EventHandler(this.addressTextBox_Click);
             // 
             // goButton
@@ -113,7 +113,7 @@
             this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
             this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(36, 36);
+            this.goButton.Size = new System.Drawing.Size(46, 36);
             this.goButton.Text = "Go";
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
@@ -123,30 +123,30 @@
             this.bookmarkButton.Image = ((System.Drawing.Image)(resources.GetObject("bookmarkButton.Image")));
             this.bookmarkButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bookmarkButton.Name = "bookmarkButton";
-            this.bookmarkButton.Size = new System.Drawing.Size(36, 36);
+            this.bookmarkButton.Size = new System.Drawing.Size(46, 36);
             this.bookmarkButton.Text = "Bookmarks";
             this.bookmarkButton.Click += new System.EventHandler(this.bookmarkButton_Click);
             // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 39);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(10, 10);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 42);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 19);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(620, 370);
+            this.webBrowser1.Size = new System.Drawing.Size(1240, 745);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // UserTabControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserTabControl";
-            this.Size = new System.Drawing.Size(620, 409);
+            this.Size = new System.Drawing.Size(1240, 787);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

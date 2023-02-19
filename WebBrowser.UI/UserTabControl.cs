@@ -76,6 +76,7 @@ namespace WebBrowser.UI
 
         private void goButton_Click(object sender, EventArgs e)
         {
+            //Allows user input to navigate to website
             Navigate(addressTextBox.Text);
         }
 
