@@ -16,6 +16,20 @@ namespace WebBroswer.Logic
 
         }
 
+        public static void RemoveItem(HistoryItem item)
+        {
+            //create new history table object and get data
+            var adapter = new HistoryTableAdapter();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+
+            }
+
+
+        }
+
         public static List<HistoryItem> GetItems()
         {
             var adapter = new HistoryTableAdapter();

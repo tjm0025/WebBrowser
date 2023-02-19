@@ -26,35 +26,30 @@ namespace WebBrowser.UI
         private void HistoryManagerForm_Load(object sender, EventArgs e)
         {
             var items = HistoryManager.GetItems();
-            listBox1.Items.Clear();
+            historyItemBox.Items.Clear();
 
             foreach (var item in items)
             {
-                listBox1.Items.Add(string.Format("[{0}] {1} {2}", item.Date, item.Title, item.URL));
+                historyItemBox.Items.Add(string.Format("[{0}] {1} {2}", item.Date, item.Title, item.URL));
             }
         }
 
         //User enters a pharse and searchs history items for keyword.
         private void searchButton_Click(object sender, EventArgs e)
         {
-            //if user has no input, load history items
-            if (searchTermBox.Text.Equals(""))
-            {
-                HistoryManagerForm_Load(sender, e);
-            }
+            //load history items from manager
+            var items = HistoryManager.GetItems();
 
-            else
+           historyItemBox.Items.Clear();
+
+            foreach (var item in items)
             {
-                listBox1.Items.Clear();
-                var history = HistoryManager.GetItems();
-                foreach (var item in history)
+                if (item.Title.Contains(searchTermBox.Text) || item.URL.Contains(searchTermBox.Text))
                 {
-                    if (item.ToString().ToUpper().Contains(searchTermBox.Text.ToUpper()))
-                    {
-                        listBox1.Items.Add(item);
-                    }
+                    historyItemBox.Items.Add(string.Format("[{0}] {1} ({2})", item.Date, item.Title, item.URL));
                 }
             }
+        
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

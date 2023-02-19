@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.historyItemBox = new System.Windows.Forms.ListBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchTermBox = new System.Windows.Forms.TextBox();
             this.deleteButton = new System.Windows.Forms.Button();
             this.clearHisButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // historyItemBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(28, 27);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1114, 629);
-            this.listBox1.TabIndex = 0;
+            this.historyItemBox.FormattingEnabled = true;
+            this.historyItemBox.ItemHeight = 25;
+            this.historyItemBox.Location = new System.Drawing.Point(28, 27);
+            this.historyItemBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.historyItemBox.Name = "historyItemBox";
+            this.historyItemBox.Size = new System.Drawing.Size(1114, 629);
+            this.historyItemBox.TabIndex = 0;
             // 
             // searchButton
             // 
@@ -90,7 +90,7 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.searchTermBox);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.historyItemBox);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "HistoryManagerForm";
             this.Text = "HistoryManagerForm";
@@ -102,7 +102,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox historyItemBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.TextBox searchTermBox;
         private System.Windows.Forms.Button deleteButton;
