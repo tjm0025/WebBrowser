@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,11 +22,11 @@ namespace WebBrowser.UI
         private void BookmarkManagerForm_Load(object sender, EventArgs e)
         {
             var items = BookmarkManager.GetItems();
-            listBox1.Items.Clear();
+            bookmarkListBox.Items.Clear();
 
             foreach (var item in items)
             {
-                listBox1.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
+                bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
 
             }
 
@@ -33,7 +34,18 @@ namespace WebBrowser.UI
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+            //load bookmarks from Bookmark manager
+            var items = BookmarkManager.GetItems();
+            bookmarkListBox.Items.Clear();
 
+            foreach (var item in items)
+            {
+                if (item.Title.Contains(searchTextBox.Text) || item.URL.Contains(searchTextBox.Text))
+                {
+                    bookmarkListBox.Items.Add(item);
+                }
+
+            }
         }
     }
 }

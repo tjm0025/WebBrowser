@@ -46,7 +46,7 @@ namespace WebBrowser.UI
             {
                 if (item.Title.Contains(searchTermBox.Text) || item.URL.Contains(searchTermBox.Text))
                 {
-                    historyItemBox.Items.Add(string.Format("[{0}] {1} ({2})", item.Date, item.Title, item.URL));
+                    historyItemBox.Items.Add(item);
                 }
             }
         
