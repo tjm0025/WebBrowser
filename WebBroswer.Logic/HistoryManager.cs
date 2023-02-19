@@ -16,18 +16,14 @@ namespace WebBroswer.Logic
 
         }
 
-        public static void RemoveItem(HistoryItem item)
+        public static void RemoveItem(HistoryItem deleteItem)
         {
-            //create new history table object and get data
+            //create new history table object
             var adapter = new HistoryTableAdapter();
-            var rows = adapter.GetData();
+            //Delete history item from table adapter
+            adapter.Delete(deleteItem.Id, deleteItem.URL, deleteItem.Title, deleteItem.Date);
 
-            foreach (var row in rows)
-            {
-
-            }
-
-
+     
         }
 
         public static List<HistoryItem> GetItems()
@@ -42,6 +38,7 @@ namespace WebBroswer.Logic
                 item.URL = row.URL;
                 item.Title = row.Title_;
                 item.Date = row.Date;
+                item.Id = row.Id;
 
                 results.Add(item);
             }

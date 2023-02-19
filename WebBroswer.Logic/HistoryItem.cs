@@ -12,5 +12,6 @@ namespace WebBroswer.Logic
         public String URL { get; set; }
         public String Title { get; set; }
         public String Date { get; set; }
+        public int Id { get; set; }
     }
 }
