@@ -11,6 +11,7 @@ namespace WebBroswer.Logic
     {
         public static void AddItem(HistoryItem item)
         {
+            //Create new adapter object and 
             var adapter = new HistoryTableAdapter();
            adapter.Insert(item.URL, item.Title, item.Date);
 
@@ -22,8 +23,6 @@ namespace WebBroswer.Logic
             var adapter = new HistoryTableAdapter();
             //Delete history item from table adapter
             adapter.Delete(deleteItem.Id, deleteItem.URL, deleteItem.Title, deleteItem.Date);
-
-     
         }
 
         public static List<HistoryItem> GetItems()

@@ -11,5 +11,6 @@ namespace WebBroswer.Logic
         //Gets and sets items for bookmarks
         public String URL { get; set; }
         public String Title { get; set; }
+        public int Id { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace WebBroswer.Logic
 {
     public class HistoryItem
     {
-        //gets and sets the URL, title, and date for history
+        //gets and sets the URL, title, Id, and date for history
         public String URL { get; set; }
         public String Title { get; set; }
         public String Date { get; set; }
