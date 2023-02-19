@@ -54,7 +54,10 @@ namespace WebBrowser.UI
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-
+            var history = HistoryManager.GetItems();
+            HistoryManager.RemoveItem(history[historyItemBox.SelectedIndex]);
+            HistoryManagerForm_Load(sender, e);
+            deleteButton.Enabled = false;
         }
     }
 }
