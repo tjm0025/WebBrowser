@@ -59,7 +59,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(1240, 42);
+            this.toolStrip1.Size = new System.Drawing.Size(1240, 50);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -69,7 +69,7 @@
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(46, 36);
+            this.backButton.Size = new System.Drawing.Size(46, 44);
             this.backButton.Text = "Back";
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -108,7 +108,7 @@
             this.addressTextBox.Items.AddRange(new object[] {
             "www.google.com"});
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(146, 42);
+            this.addressTextBox.Size = new System.Drawing.Size(500, 50);
             this.addressTextBox.Click += new System.EventHandler(this.addressTextBox_Click);
             // 
             // goButton
@@ -134,11 +134,11 @@
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 42);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 50);
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(4);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 19);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1240, 745);
+            this.webBrowser1.Size = new System.Drawing.Size(1240, 737);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
@@ -157,7 +157,7 @@
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 30);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 30);
             // 
             // toolStripStatusLabel1
             // 
