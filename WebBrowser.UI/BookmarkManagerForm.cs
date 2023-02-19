@@ -30,5 +30,10 @@ namespace WebBrowser.UI
             }
 
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

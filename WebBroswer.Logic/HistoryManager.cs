@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WebBrowser.Data.HistoryDataSetTableAdapters;
@@ -9,11 +10,19 @@ namespace WebBroswer.Logic
 {
     public class HistoryManager
     {
-        public static void AddItem(HistoryItem item)
+        //Add item keeps throwing a unhandled exception error
+        public static void AddItem(HistoryItem itemAdd)
         {
-            //Create new adapter object and 
             var adapter = new HistoryTableAdapter();
-           adapter.Insert(item.URL, item.Title, item.Date);
+            try
+            {
+                adapter.Insert(itemAdd.URL, itemAdd.Title, itemAdd.Date);
+            }
+            catch (Exception ex)
+            {
+             Console.WriteLine(ex.ToString());
+            }
+           
 
         }
 
