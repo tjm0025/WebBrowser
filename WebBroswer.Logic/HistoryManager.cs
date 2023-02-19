@@ -10,7 +10,7 @@ namespace WebBroswer.Logic
 {
     public class HistoryManager
     {
-        //Add item keeps throwing a unhandled exception error
+        //Add item keeps throwing a unhandled exception error, so inserted a try catch
         public static void AddItem(HistoryItem itemAdd)
         {
             var adapter = new HistoryTableAdapter();

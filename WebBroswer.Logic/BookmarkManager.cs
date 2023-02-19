@@ -9,10 +9,18 @@ namespace WebBroswer.Logic
 {
     public class BookmarkManager
     {
+        //Add item keeps throwing a unhandled exception error, so inserted a try catch
         public static void AddItem(BookmarkItem itemAdd)
         {
             var adapter = new BookmarkTableAdapter();
-            adapter.Insert(itemAdd.URL, itemAdd.Title);
+            try
+            {
+                adapter.Insert(itemAdd.URL, itemAdd.Title);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         //Deletes bookmark item from bookmark database
