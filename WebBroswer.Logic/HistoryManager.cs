@@ -54,7 +54,7 @@ namespace WebBroswer.Logic
             return results;
         }
 
-        public static void ClearHistory(HistoryItem clearItem)
+        public static void ClearHistory()
         {
             var clearhistory = HistoryManager.GetItems();
             foreach ( var item in clearhistory )

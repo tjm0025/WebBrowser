@@ -40,7 +40,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.progressBar = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.progressStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -135,20 +135,21 @@
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 39);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(10, 10);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(620, 370);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.progressBar,
-            this.toolStripStatusLabel1});
+            this.progressStatusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 384);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
@@ -158,15 +159,15 @@
             // 
             // progressBar
             // 
+            this.progressBar.Maximum = 10;
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(150, 19);
             this.progressBar.Click += new System.EventHandler(this.progressBar_Click);
             // 
-            // toolStripStatusLabel1
+            // progressStatusLabel
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 20);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.progressStatusLabel.Name = "progressStatusLabel";
+            this.progressStatusLabel.Size = new System.Drawing.Size(0, 20);
             // 
             // UserTabControl
             // 
@@ -175,7 +176,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserTabControl";
             this.Size = new System.Drawing.Size(620, 409);
             this.toolStrip1.ResumeLayout(false);
@@ -200,6 +201,6 @@
         private System.Windows.Forms.ToolStripButton bookmarkButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripProgressBar progressBar;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel progressStatusLabel;
     }
 }

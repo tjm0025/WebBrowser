@@ -132,8 +132,25 @@ namespace WebBrowser.UI
 
         }
 
-       
-
-
+        private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+            try 
+            {
+                progressBar.Value = Convert.ToInt32(e.CurrentProgress);
+                progressBar.Maximum= Convert.ToInt32(e.MaximumProgress);
+            }
+            catch (Exception)
+            {
+                progressBar.Value = 0;
+            }
+            if (progressBar.Value == 0)
+            {
+                progressStatusLabel.Text = "Done.";
+            }
+            else
+            {
+                progressStatusLabel.Text = "Loading...";
+            }
+        }
     }
 }

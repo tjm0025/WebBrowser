@@ -45,6 +45,7 @@
             this.userTabControl2 = new WebBrowser.UI.UserTabControl();
             this.userTabControl1 = new WebBrowser.UI.UserTabControl();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.clearHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -113,7 +114,8 @@
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageHistoryToolStripMenuItem,
-            this.manageBookmarksToolStripMenuItem});
+            this.manageBookmarksToolStripMenuItem,
+            this.clearHistoryToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
             this.toolsToolStripMenuItem.Text = "&Tools";
@@ -198,6 +200,13 @@
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
+            // clearHistoryToolStripMenuItem
+            // 
+            this.clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
+            this.clearHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearHistoryToolStripMenuItem.Text = "Clear History";
+            this.clearHistoryToolStripMenuItem.Click += new System.EventHandler(this.clearHistoryToolStripMenuItem_Click);
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +246,7 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private UserTabControl userTabControl1;
         private UserTabControl userTabControl2;
+        private System.Windows.Forms.ToolStripMenuItem clearHistoryToolStripMenuItem;
     }
 }
 
